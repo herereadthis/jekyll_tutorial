@@ -1,0 +1,25 @@
+{
+  "name": "jekyll_tutorial",
+  "version": "0.0.0",
+  "description": "Following the instructions on Jekyll tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/herereadthis/jekyll_tutorial.git"
+  },
+  "author": "Jimmy Ha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/herereadthis/jekyll_tutorial/issues"
+  },
+  "homepage": "https://github.com/herereadthis/jekyll_tutorial",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^0.11.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jekyll": "^0.4.2"
+  }
+}
