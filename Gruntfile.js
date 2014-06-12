@@ -8,10 +8,32 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         // compiles LESS file to minified CSS
         jekyll: {
+            build: {
+                options: {
+                    dest: './_site'
+                }
+            }
         },
         less: {
+            minifiedLongbow: {
+                options: {
+                    paths: ["./css/less"],
+                    cleancss: true
+                },
+                files: {
+                    "./css/main.css": "./css/less/main.less"
+                }
+            }
         },
         watch: {
+            jekyll: {
+                files: ['./_includes', './_layouts', './_posts'],
+                tasks: ['jekyll']
+            },
+            less: {
+                files: ["./css/less/*"],
+                tasks: ['less']
+            }
         }
     });
     grunt.loadNpmTasks('grunt-jekyll');
@@ -24,6 +46,8 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('default', [
+        'jekyll',
+        'less',
         'watch'
     ]);
 };
